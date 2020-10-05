@@ -145,15 +145,6 @@ typedef struct {
 	int monitor;
 } Rule;
 
-typedef struct {
-	int monitor;
-	int layout;
-	float mfact;
-	int nmaster;
-	int showbar;
-	int topbar;
-} MonitorRule;
-
 /* function declarations */
 static void applyrules(Client *c);
 static int applysizehints(Client *c, int *x, int *y, int *w, int *h, int interact);
@@ -671,9 +662,7 @@ configurerequest(XEvent *e)
 Monitor *
 createmon(void)
 {
-	Monitor *m, *mon;
-	unsigned int mi, j;
-	const MonitorRule *mr;
+	Monitor *m;
 
 	m = ecalloc(1, sizeof(Monitor));
 	m->tagset[0] = m->tagset[1] = 1;
@@ -682,27 +671,9 @@ createmon(void)
 	m->showbar = showbar;
 	m->topbar = topbar;
 	m->gappx = gappx;
-
-
-	for (mi = 0, mon = mons; mon; mon = mon->next, mi++);
-	for (j = 0; j < LENGTH(monrules); j++) {
-		mr = &monrules[j];
-		if ((mr->monitor == -1 || mr->monitor == mi)) {
-			m->lt[0] = &layouts[mr->layout];
-			m->lt[1] = &layouts[1 % LENGTH(layouts)];
-			strncpy(m->ltsymbol, layouts[mr->layout].symbol, sizeof m->ltsymbol);
-
-			if (mr->mfact > -1)
-				m->mfact = mr->mfact;
-			if (mr->nmaster > -1)
-				m->nmaster = mr->nmaster;
-			if (mr->showbar > -1)
-				m->showbar = mr->showbar;
-			if (mr->topbar > -1)
-				m->topbar = mr->topbar;
-			break;
-		}
-	}
+	m->lt[0] = &layouts[0];
+	m->lt[1] = &layouts[1 % LENGTH(layouts)];
+	strncpy(m->ltsymbol, layouts[0].symbol, sizeof m->ltsymbol);
 	return m;
 }
 
@@ -1748,17 +1719,9 @@ tag(const Arg *arg)
 void
 tagmon(const Arg *arg)
 {
-	Client *c = selmon->sel;
-	if (!c || !mons->next)
+	if (!selmon->sel || !mons->next)
 		return;
-	if (c->isfullscreen) {
-		c->isfullscreen = 0;
-		sendmon(c, dirtomon(arg->i));
-		c->isfullscreen = 1;
-		resizeclient(c, c->mon->mx, c->mon->my, c->mon->mw, c->mon->mh);
-		XRaiseWindow(dpy, c->win);
-	} else
-		sendmon(c, dirtomon(arg->i));
+	sendmon(selmon->sel, dirtomon(arg->i));
 }
 
 void

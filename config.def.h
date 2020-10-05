@@ -43,12 +43,6 @@ static const Rule rules[] = {
 	{ "TelegramDesktop",      NULL,       NULL,       1 << 3,            1,           1 },
 };
 
-static const MonitorRule monrules[] = {
-	/* monitor layout  mfact  nmaster  showbar  topbar */
-	{  1,      0,      -1,    -1,       0,      -1     }, // use a different layout for the second monitor
-	{  -1,     0,      -1,    -1,      -1,      -1     }, // default
-};
-
 /* layout(s) */
 static const float mfact     = 0.55; /* factor of master area size [0.05..0.95] */
 static const int nmaster     = 1;    /* number of clients in master area */
