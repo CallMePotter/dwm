@@ -38,9 +38,10 @@ static const Rule rules[] = {
 	/* class      instance    title       tags mask     isfloating   monitor */
 	{ "Gimp",     NULL,       NULL,       0,            1,           0 },
 	{ "firefox",  NULL,       NULL,       1,            0,           0 },
-	{ "st",       NULL,       NULL,       1 << 1,            0,           1 },
-	{ "Steam",    NULL,       NULL,       1 << 2,            1,           1 },
-	{ "TelegramDesktop",      NULL,       NULL,       1 << 3,            1,           1 },
+	{ "mpv",      NULL,       NULL,       1 << 8,       0,           0 },
+	{ "st",       NULL,       NULL,       1 << 1,       0,           1 },
+	{ "Steam",    NULL,       NULL,       1 << 2,       1,           1 },
+	{ "TelegramDesktop",      NULL,       NULL,         1 << 3,            1,           1 },
 };
 
 /* layout(s) */
@@ -65,6 +66,7 @@ static const Layout layouts[] = {
 
 /* helper for spawning shell commands in the pre dwm-5.0 fashion */
 #define SHCMD(cmd) { .v = (const char*[]){ "/bin/sh", "-c", cmd, NULL } }
+
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
