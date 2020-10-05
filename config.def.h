@@ -8,7 +8,7 @@ static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const int user_bh            = 25;        /* 0 means that dwm will calculate bar height, >= 1 means dwm will user_bh as bar height */
 static const char *fonts[]          = { "mononki Nerd Font:size=9" };
-static const char dmenufont[]       = "monospace:size=10";
+static const char dmenufont[]       = "mononoki Nerd Font:size=9";
 static const char col_gray1[]       = "#222222";
 static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
@@ -36,9 +36,11 @@ static const Rule rules[] = {
 	 *	WM_NAME(STRING) = title
 	 */
 	/* class      instance    title       tags mask     isfloating   monitor */
-	{ "Gimp",     NULL,       NULL,       0,            1,          -1 },
+	{ "Gimp",     NULL,       NULL,       0,            1,           0 },
 	{ "firefox",  NULL,       NULL,       1,            0,           0 },
-	{ "st",       NULL,       NULL,       1,            0,           1 },
+	{ "st",       NULL,       NULL,       1 << 1,            0,           1 },
+	{ "Steam",    NULL,       NULL,       1 << 2,            1,           1 },
+	{ "TelegramDesktop",      NULL,       NULL,       1 << 3,            1,           1 },
 };
 
 /* layout(s) */
