@@ -41,6 +41,7 @@ static const Rule rules[] = {
 	{ "mpv",      NULL,       NULL,       1 << 8,       0,           0 },
 	{ "st",       NULL,       NULL,       1 << 1,       0,           1 },
 	{ "Steam",    NULL,       NULL,       1 << 2,       0,           1 },
+	{ "Tor Browser",          NULL,       NULL,         1 << 6,                 1,           0 },
 	{ "TelegramDesktop",      NULL,       NULL,         1 << 3,            1,           1 },
 };
 
