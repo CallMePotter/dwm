@@ -41,17 +41,10 @@ static const Rule rules[] = {
 	{ "st",       NULL,       NULL,       1 << 1,       0,           1 },
 	{ "Steam",    NULL,       NULL,       1 << 2,       0,           1 },
 	{ "mpv",      NULL,       NULL,       1 << 8,       0,           0 },
-
-	/* class                     instance    title     tags mask      isfloating   monitor */
-
-	{ "Tor Browser",             NULL,       NULL,     1 << 3,        1,           1 },
-	{ "TelegramDesktop",         NULL,       NULL,     1 << 3,        1,           1 },
-	{ "VirtualBox Manager",      NULL,       NULL,     1 << 4,        0,           1 },
-	{ "VirtualBox Machine",      NULL,       NULL,     1 << 5,        0,           1 },
 };
 
 /* layout(s) */
-static const float mfact     = 0.55; /* factor of master area size [0.05..0.95] */
+static const float mfact     = 0.50; /* factor of master area size [0.05..0.95] */
 static const int nmaster     = 1;    /* number of clients in master area */
 static const int resizehints = 0;    /* 1 means respect size hints in tiled resizals */
 
