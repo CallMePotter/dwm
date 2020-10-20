@@ -19,7 +19,7 @@ static const unsigned int borderalpha = OPAQUE;
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray3, col_gray1, col_gray1 },
-	[SchemeSel]  = { col_gray4, col_gray1,  col_gray3 },
+	[SchemeSel]  = { col_gray4, col_gray1,  col_cyan },
 };
 static const unsigned int alphas[][3]      = {
 	/*               fg      bg        border     */
@@ -79,8 +79,8 @@ static const char *termcmd[]  = { "st", NULL };
 
 
 static Key keys[] = {
-	/* modifier                     key        function        argument */
-	{ MODKEY,                       XK_w,      spawn,          SHCMD("firefox")},
+	/* modifier                     key            function        argument */
+	{ MODKEY,                       XK_w,          spawn,          SHCMD("firefox")},
 
 	{ MODKEY,                       XK_d,      spawn,          {.v = dmenucmd } },
 	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
@@ -89,8 +89,8 @@ static Key keys[] = {
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
 	{ MODKEY,                       XK_i,      incnmaster,     {.i = +1 } },
 	{ MODKEY,                       XK_u,      incnmaster,     {.i = -1 } },
-	{ MODKEY,                       XK_comma,      setmfact,       {.f = -0.05} },
-	{ MODKEY,                       XK_period,      setmfact,       {.f = +0.05} },
+	{ MODKEY|ShiftMask,             XK_j,      setmfact,       {.f = -0.05} },
+	{ MODKEY|ShiftMask,             XK_k,      setmfact,       {.f = +0.05} },
 	{ MODKEY,                       XK_z,      zoom,           {0} },
 	{ MODKEY,                       XK_Tab,    view,           {0} },
 	{ MODKEY,                       XK_q,      killclient,     {0} },
