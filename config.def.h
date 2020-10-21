@@ -40,6 +40,7 @@ static const Rule rules[] = {
 	{ "mpv",      NULL,       NULL,       1 << 8,       0,           0 },
 	{ "Steam",    NULL,       NULL,       1 << 2,       0,           1 },
 	{ "firefox",  NULL,       NULL,       1,            0,           0 },
+	{ "firefox",  NULL,       "Library",  1,            1,           0 },
 
 	/* class                   instance    title       tags mask     isfloating   monitor */
 	{ "Tor Browser",           NULL,       NULL,       0,            1,           -1 },
