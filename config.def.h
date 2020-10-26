@@ -10,7 +10,7 @@ static const int user_bh            = 25;        /* 0 means that dwm will calcul
 static const char *fonts[]          = { "DejaVu Sans Mono:size=8" };
 static const char dmenufont[]       = "DejaVu Sans Mono:size=8";
 static const char col_gray1[]       = "#1d2021";
-static const char col_gray2[]       = "#444444";
+static const char col_gray2[]       = "#282828";
 static const char col_gray3[]       = "#bbbbbb";
 static const char col_gray4[]       = "#eeeeee";
 static const char col_cyan[]        = "#458588";
