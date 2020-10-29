@@ -43,6 +43,7 @@ static const Rule rules[] = {
 	{ "firefox",  NULL,       "Library",  1,            1,           0 },
 
 	/* class                   instance    title       tags mask     isfloating   monitor */
+	{ "TeamSpeak 3",           NULL,       NULL,       1 << 5,            1,            1 },
 	{ "Tor Browser",           NULL,       NULL,       0,                 1,           -1 },
 	{ "TelegramDesktop",       NULL,       NULL,       0,                 1,           -1 },
 	{ "VirtualBox Manager",    NULL,       NULL,       1 << 3,            1,            1 },
