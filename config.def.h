@@ -85,7 +85,7 @@ static const char *termcmd[]  = { "st", NULL };
 static Key keys[] = {
 	/* modifier                     key            function        argument */
 	{ MODKEY,                       XK_w,          spawn,          SHCMD("firefox")},
-	{      0,                       XK_Print,      spawn,          SHCMD("screenshot")},
+	{      0,                       XK_Print,      spawn,          SHCMD("flameshot gui")},
 
 	{ MODKEY,                       XK_d,          spawn,          {.v = dmenucmd } },
 	{ MODKEY,                       XK_Return,     spawn,          {.v = termcmd } },
