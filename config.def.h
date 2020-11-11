@@ -48,8 +48,6 @@ static const Rule rules[] = {
 	{ "Transmission-gtk",      NULL,       NULL,       0,                 1,           -1 },
 	{ "TelegramDesktop",       NULL,       NULL,       0,                 1,           -1 },
 	{ "VirtualBox Manager",    NULL,       NULL,       1 << 3,            1,            1 },
-
-
 };
 
 /* layout(s) */
