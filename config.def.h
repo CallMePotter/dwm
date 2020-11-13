@@ -40,7 +40,10 @@ static const Rule rules[] = {
 	{ "mpv",      NULL,       NULL,       1 << 8,       0,           0 },
 	{ "Steam",    NULL,       NULL,       1 << 2,       1,           1 },
 	{ "firefox",  NULL,       NULL,       1,            0,           0 },
-	{ "firefox",  NULL,       "Library",  1,            1,           0 },
+
+	/* class      instance    title                     tags mask     isfloating   monitor */
+	{ "firefox",  NULL,       "Library",                1,            1,           0 },
+	{ "firefox",  NULL,       "Picture-in-Picture",     1,            1,           0 },
 
 	/* class                   instance    title       tags mask     isfloating   monitor */
 	{ "TeamSpeak 3",           NULL,       NULL,       1 << 5,            1,            1 },
