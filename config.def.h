@@ -45,7 +45,6 @@ static const Rule rules[] = {
 	{ "firefox",  NULL,       "Picture-in-Picture",     0,            1,           0 },
 
 	/* class                   instance    title       tags mask     isfloating   monitor */
-	{ "libreoffice",           NULL,       NULL,       1 << 2,            0,            1 },
 	{ "Tor Browser",           NULL,       NULL,       0,                 1,            0 },
 	{ "TeamSpeak 3",           NULL,       NULL,       0,                 1,            1 },
 	{ "TelegramDesktop",       NULL,       NULL,       0,                 1,            1 },
