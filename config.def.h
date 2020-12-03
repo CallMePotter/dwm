@@ -37,20 +37,20 @@ static const Rule rules[] = {
 	 */
 	/* class      instance    title       tags mask     isfloating   monitor */
 	{ "st",       NULL,       NULL,       1 << 1,       0,           1 },
-	{ "mpv",      NULL,       NULL,       1 << 8,       0,           0 },
-	{ "Steam",    NULL,       NULL,       1 << 2,       1,           1 },
+	{ "mpv",      NULL,       NULL,            0,       0,           0 },
 
 	/* class      instance    title                     tags mask     isfloating   monitor */
-	{ "firefox",  NULL,       NULL,                     1,            0,           0 },
-	{ "firefox",  NULL,       "Library",                1,            1,           0 },
-	{ "firefox",  NULL,       "Picture-in-Picture",     1,            1,           0 },
+	{ "firefox",  NULL,       NULL,                     0,            0,           0 },
+	{ "firefox",  NULL,       "Library",                0,            1,           0 },
+	{ "firefox",  NULL,       "Picture-in-Picture",     0,            1,           0 },
 
 	/* class                   instance    title       tags mask     isfloating   monitor */
+	{ "libreoffice",           NULL,       NULL,       1 << 2,            0,            1 },
 	{ "Tor Browser",           NULL,       NULL,       0,                 1,            0 },
 	{ "TeamSpeak 3",           NULL,       NULL,       0,                 1,            1 },
-	{ "Transmission-gtk",      NULL,       NULL,       0,                 1,            1 },
 	{ "TelegramDesktop",       NULL,       NULL,       0,                 1,            1 },
-	{ "VirtualBox Manager",    NULL,       NULL,       1 << 3,            1,            1 },
+	{ "Transmission-gtk",      NULL,       NULL,       0,                 1,            1 },
+	{ "VirtualBox Manager",    NULL,       NULL,       0,                 1,            1 },
 };
 
 /* layout(s) */
