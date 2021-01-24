@@ -40,7 +40,7 @@ static const Rule rules[] = {
 	{ "mpv",      NULL,       NULL,            0,       0,           0 },
 
 	/* class                   instance    title       tags mask     isfloating   monitor */
-	{ "Brave-browser",         NULL,       NULL,       0,            0,           0 },
+	{ "firefox",         NULL,       NULL,       0,            0,           0 },
 
 	/* class                   instance    title       tags mask     isfloating   monitor */
 	{ "Tor Browser",           NULL,       NULL,       0,                 1,            0 },
@@ -82,7 +82,7 @@ static const char *termcmd[]  = { "st", NULL };
 
 static Key keys[] = {
 	/* modifier                     key            function        argument */
-	{ MODKEY,                       XK_w,          spawn,          SHCMD("brave")},
+	{ MODKEY,                       XK_w,          spawn,          SHCMD("firefox")},
 	{      0,                       XK_Print,      spawn,          SHCMD("flameshot gui")},
 
 	{ MODKEY,                       XK_d,          spawn,          {.v = dmenucmd } },
