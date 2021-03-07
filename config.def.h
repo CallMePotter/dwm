@@ -35,19 +35,17 @@ static const Rule rules[] = {
 	 *	WM_CLASS(STRING) = instance, class
 	 *	WM_NAME(STRING) = title
 	 */
-	/* class      instance    title       tags mask     isfloating   monitor */
-	{ "st",       NULL,       NULL,            0,       0,           1 },
-	{ "mpv",      NULL,       NULL,            0,       0,           0 },
+	/* class                   instance    title       tags mask       isfloating    monitor */
+	{ "mpv",                   NULL,       NULL,       0,              0,            0 },
+	{ "LibreWolf",             NULL,       NULL,       0,              0,            0 },
+	{ "Tor Browser",           NULL,       NULL,       0,              1,            0 },
 
-	/* class                   instance    title       tags mask     isfloating   monitor */
-	{ "firefox",         NULL,       NULL,       0,            0,           0 },
-
-	/* class                   instance    title       tags mask     isfloating   monitor */
-	{ "Tor Browser",           NULL,       NULL,       0,                 1,            0 },
-	{ "TeamSpeak 3",           NULL,       NULL,       0,                 1,            1 },
-	{ "TelegramDesktop",       NULL,       NULL,       0,                 1,            1 },
-	{ "Transmission-gtk",      NULL,       NULL,       0,                 1,            1 },
-	{ "VirtualBox Manager",    NULL,       NULL,       0,                 1,            1 },
+	/* class                   instance    title       tags mask       isfloating    monitor */
+	{ "st",                    NULL,       NULL,       0,              0,            1 },
+	{ "TeamSpeak 3",           NULL,       NULL,       0,              1,            1 },
+	{ "TelegramDesktop",       NULL,       NULL,       0,              1,            1 },
+	{ "Transmission-gtk",      NULL,       NULL,       0,              1,            1 },
+	{ "VirtualBox Manager",    NULL,       NULL,       0,              1,            1 },
 };
 
 /* layout(s) */
@@ -82,7 +80,7 @@ static const char *termcmd[]  = { "st", NULL };
 
 static Key keys[] = {
 	/* modifier                     key            function        argument */
-	{ MODKEY,                       XK_w,          spawn,          SHCMD("firefox")},
+	{ MODKEY,                       XK_w,          spawn,          SHCMD("librewolf")},
 	{      0,                       XK_Print,      spawn,          SHCMD("flameshot gui")},
 
 	{ MODKEY,                       XK_d,          spawn,          {.v = dmenucmd } },
