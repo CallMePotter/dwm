@@ -9,7 +9,7 @@ static const int topbar             = 1;        /* 0 means bottom bar */
 static const int user_bh            = 25;        /* 0 means that dwm will calculate bar height, >= 1 means dwm will user_bh as bar height */
 static const char *fonts[]          = { "DejaVu Sans Mono:size=8" };
 static const char dmenufont[]       = "DejaVu Sans Mono:size=8";
-static const char col_gray1[]       = "#1d2021";
+static const char col_gray1[]       = "#040404";
 static const char col_gray2[]       = "#282828";
 static const char col_gray3[]       = "#bbbbbb";
 static const char col_gray4[]       = "#eeeeee";
